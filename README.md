@@ -1,12 +1,15 @@
 🦉 Golden Owl Exam Scores Dashboard
+
 🚀 Giới Thiệu Dự Án
 Đây là dự án Web Full-Stack được phát triển trong khuôn khổ bài kiểm tra tuyển dụng Thực tập sinh Phát triển Web tại Golden Owl.
 Ứng dụng cho phép nhập dữ liệu điểm thi THPT quốc gia (từ file .csv) vào database, sau đó cung cấp các tính năng tra cứu điểm theo số báo danh và các báo cáo thống kê chuyên sâu.
+
 🌟 Tính năng Chính
 •	Nhập liệu tự động: Chuyển đổi dữ liệu từ diem_thi_thpt_2024.csv vào PostgreSQL ngay khi ứng dụng Backend khởi động lần đầu (sử dụng Seeder).
 •	Tra cứu điểm: Tìm kiếm và hiển thị điểm chi tiết của thí sinh qua Số báo danh (SBD).
 •	Thống kê điểm: Biểu đồ hiển thị số lượng học sinh theo 4 cấp độ điểm (< 4, [4, 6), [6, 8), >= 8) theo từng môn học.
 •	Top 10 Khối A: Danh sách 10 thí sinh có tổng điểm Toán + Lý + Hóa cao nhất.
+
 💻 Công Nghệ (Tech Stack)
 • Backend: NestJS	
 • Database:	PostgreSQL
@@ -34,16 +37,19 @@ Bước 4: Truy cập ứng dụng
 Sau khi các container chạy xong có thể truy cập ứng dụng:
 • Frontend (Next.js): http://localhost:3001
 • Backend API (NestJS): http://localhost:3000
+
 🧪 Các Endpoint API chính
 Nếu bạn muốn kiểm tra trực tiếp các API bằng Postman/cURL:
 • Tra cứu điểm (GET): /scores/:registrationNumber
 • Thống kê điểm	(GET): /reports/subject-stats
 • Top 10 Khối A	(GET): /reports/top-a
+
 🛑 Dừng và Xóa môi trường
 Để dừng và xóa các container cũng như networks đã tạo:
 docker compose down
 Nếu muốn xóa sạch cả dữ liệu PostgreSQL đã lưu trữ:
 docker volume rm golden-owl-project_postgres_data
+
 🔗 Demo
 Video demo: https://drive.google.com/file/d/1rx5E0lC3mIqgR0hqr2Ln7aSVoeAvOYit/view?usp=sharing
 
